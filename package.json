@@ -1,5 +1,5 @@
 {
-  "name": "@ms-ecology/ms-download",
+  "name": "@ms-ecology/ms-dl",
   "version": "1.0.0",
   "description": "myshell download tools",
   "main": "src/index.js",
@@ -9,12 +9,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ms-ecology/ms-download.git"
-  },
-  "files": [
-    "src"
-  ],
-  "publishConfig": {
-    "access": "public"
   },
   "keywords": [
     "shell",
@@ -31,5 +25,6 @@
     "rimraf": "^3.0.2",
     "user-home": "^3.0.0",
     "uuid": "^8.3.2"
-  }
+  },
+  "devDependencies": {}
 }
