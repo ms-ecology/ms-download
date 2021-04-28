@@ -19,7 +19,7 @@ module.exports = async function (moduleName) { // for toplevel await
     let config = JSON.parse(fs.readFileSync(configPath, 'utf8'))
     HAS_MYSHELL && Object.keys(config).forEach(cmd => {
       let sciptePath = path.join(configPath, '../', config[cmd].path)
-      exec(`ms template -t ${config[cmd].type} -c ${cmd} -d ${config[cmd].desc} -f ${sciptePath}`) // use myshell template to add scripts
+      exec(`ms template -t ${config[cmd].type} -c ${cmd} -d "${config[cmd].desc}" -f ${sciptePath}`) // use myshell template to add scripts
     })
     rm(tempDir)
   } catch (err) {
