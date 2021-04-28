@@ -10,9 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/ms-ecology/ms-download.git"
   },
+  "files": [
+    "src"
+  ],
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
+    "access": "public"
   },
   "keywords": [
     "shell",
