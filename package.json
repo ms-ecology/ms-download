@@ -1,0 +1,33 @@
+{
+  "name": "@ms-ecology/ms-download",
+  "version": "1.0.0",
+  "description": "myshell download tools",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ms-ecology/ms-download.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "shell",
+    "download"
+  ],
+  "author": "anothersola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ms-ecology/ms-download/issues"
+  },
+  "homepage": "https://github.com/ms-ecology/ms-download#readme",
+  "dependencies": {
+    "download-git-repo": "^3.0.2",
+    "rimraf": "^3.0.2",
+    "user-home": "^3.0.0",
+    "uuid": "^8.3.2"
+  }
+}
