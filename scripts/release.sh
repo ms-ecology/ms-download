@@ -4,4 +4,4 @@ else
   type=$1
 fi
 
-npm version $type -m '[release] '$type': @%s'
+npm version $type -m '[release] '$type': @%s' && git push # use github-action to publish
