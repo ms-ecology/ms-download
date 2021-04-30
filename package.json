@@ -4,6 +4,7 @@
   "description": "myshell download tools",
   "main": "src/index.js",
   "scripts": {
+    "release": "sh scripts/release.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
