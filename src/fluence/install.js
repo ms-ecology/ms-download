@@ -13,7 +13,10 @@ const tempDir = uuidv4()
 module.exports = async function (moduleName) { // for toplevel await
 
   try {
-    await download(`ms-ecology/${moduleName}`, tempDir)
+    if (!moduleName.includes('/')) { // auto concat path
+      moduleName = `ms-ecology/${moduleName}`
+    }
+    await download(moduleName, tempDir)
     let configPath = path.resolve(tempDir, 'config.json')
 
     let config = JSON.parse(fs.readFileSync(configPath, 'utf8'))
@@ -23,7 +26,7 @@ module.exports = async function (moduleName) { // for toplevel await
     })
     rm(tempDir)
   } catch (err) {
-    if(err.statusCode == 404) console.error(`[${moduleName}] is not found, please check your inputs.\n`)
+    if (err.statusCode == 404) console.error(`[${moduleName}] is not found, please check your inputs.\n`)
     console.error(`There are something wrong with [ms-download]: ${err}\n`)
   }
 
