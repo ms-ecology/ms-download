@@ -24,10 +24,10 @@ module.exports = async function (moduleName) { // for toplevel await
       let sciptePath = path.join(configPath, '../', config[cmd].path)
       exec(`ms template -t ${config[cmd].type} -c ${cmd} -d "${config[cmd].desc}" -f ${sciptePath}`) // use myshell template to add scripts
     })
-    rm(tempDir)
   } catch (err) {
     if (err.statusCode == 404) console.error(`[${moduleName}] is not found, please check your inputs.\n`)
     console.error(`There are something wrong with [ms-download]: ${err}\n`)
   }
+  rm(tempDir)
 
 }
